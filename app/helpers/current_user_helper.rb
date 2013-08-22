@@ -1,7 +1,5 @@
 def current_user
-  @user ||= User.find(session[:user_id])
-
-  if not @user 
-    redirect to '/'
+  if session[:user_id]
+    @user ||= User.find(session[:user_id])
   end
 end

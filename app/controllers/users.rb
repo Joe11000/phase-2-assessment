@@ -1,6 +1,6 @@
 # log out
 get '/logout' do 
-  session.clear
+  session[:user_id] = nil
   redirect to '/'
 end
 

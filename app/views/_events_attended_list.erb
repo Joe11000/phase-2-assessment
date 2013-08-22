@@ -1,5 +1,11 @@
 <ul>
   <% @events_attended_list.each do |event|  %>
-    <li><%= event.name %> at the <%= event.location %></li>
+    <li><a href="/event/<%= event.id %>"><%= event.name %> at the <%= event.location %> </a>
+      
+
+      <form action="/event/edit/<%= event.id %>" action="get">
+          <input type="submit"  value="edit">
+      </form>
+  </li>
   <% end %>
 </ul>

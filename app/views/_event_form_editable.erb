@@ -1,0 +1,7 @@
+  <form action='/event/edit/<%= @event.id %>' method='post'>
+      event :      <input type="text"      name="event[name]"       value="<%= @event.try(:name) %>"      >     <br>        
+      location :   <input type="text"      name="event[location]"   value="<%= @event.try(:location) %> " > <br>  
+      starts_at :  <input type="text"      name="event[starts_at]"  value="<%= @event.try(:starts_at)%> " >    <br>        
+      ends_at :    <input type="text"      name="event[ends_at]"    value="<%= @event.try(:ends_at)  %> " ><br>  
+      <input type="submit"                                          value="submit">
+  </form>

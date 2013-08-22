@@ -30,8 +30,8 @@ end
 
 for i in 1..10
   User.find(i).events << Event.find(i)          # everybody created one
-  User.find(i).event_attendances << Event.all   # everyone is going to everybodys event
-
+  User.find(i).event_attendances << EventAttendance.all   # everyone is going to everybodys event
+  
 end
 
 

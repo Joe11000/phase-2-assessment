@@ -1,4 +1,8 @@
 get '/' do
   # Look in app/views/index.erb
-  erb :index
+  if current_user
+    erb :homepage
+  else
+    erb :index
+  end
 end

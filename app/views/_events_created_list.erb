@@ -1,7 +1,15 @@
 <ul>
   <% @user.events.each do |event|  %>
     <a href="/event/<%= event.id %>">
-       <li><%= event.name %> at the <%= event.location %></li>
+       <li><%= event.name %> at the <%= event.location %>
+          <form action="/event/edit/<%= event.id %>" action="get">
+              <input type="submit"  value="edit">
+          </form>
+
+          <form action="/event/delete/<%= event.id %>" action="post">
+              <input type="submit"  value="delete">
+          </form>
+        </li>
     </a> 
   <% end %>
 </ul>
