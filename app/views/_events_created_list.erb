@@ -1,0 +1,7 @@
+<ul>
+  <% @user.events.each do |event|  %>
+    <a href="/event/<%= event.id %>">
+       <li><%= event.name %> at the <%= event.location %></li>
+    </a> 
+  <% end %>
+</ul>

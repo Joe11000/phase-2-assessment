@@ -1,0 +1,5 @@
+<ul>
+  <% @events_attended_list.each do |event|  %>
+    <li><%= event.name %> at the <%= event.location %></li>
+  <% end %>
+</ul>
